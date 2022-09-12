@@ -8,10 +8,6 @@
     <title>Matheus Costa</title>
   </head>
 
-  <?php 
-    include 'style.css';
-    ?>
-
   <body>
     <div class="containerImgTitle">
        <h1>Matheus Costa 👾</h1>
