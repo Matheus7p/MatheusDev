@@ -1,117 +1,51 @@
 *{
-    margin: 0;
-    padding: 0;
     background-color: #191d27;
 }
-
-h1{
-    align-items: center;
+.titleSection{
+    font-family: "Montserrat";
     color: white;
-    font-family: 'Times New Roman', Times, serif;
-    margin-left: 9%;
+    margin-top: 30px;
+    white-space: nowrap;
 }
 
-.icon{
-    width: 25px;
-    top: -5;
+#profilePic{
+    border: solid white 1px;
+    border-radius: 25px;
 }
 
-.profilepic{
-    width: 70%;
-    height: 80%;
-    border-radius: 40px;
-    border: solid white 2px;
-    justify-content: center;
-    display: flex;
-}
-
-.containerImgTitle{
+#introText{
+    font-family: "Montserrat";
+    line-height: 35px;
+    letter-spacing: 1px;
     color: white;
-    position: absolute;
-    top: 30%;
-    left: 55%;
-    transform: translate(-50%,-50%);    
-
-}
-
-p{
-    color: white;
-    font-size: 24px;
-    font-family: 'Times New Roman', Times, serif;
-    position: absolute;
-    top: 62%;
-    left: 52%;
-    transform: translate(-50%,-50%);    
+    font-size: 20px;
+    margin-top: 10px;
     text-align: center;
-    
 }
 
-
-#link1{
-    top: 75%;
-    left: 52%;
+.iconLink{
+    max-width: 50px;
+    margin: 20px;
 }
 
-#link2{
-    top: 80%;
-    left: 52%;
-}
-#link3{
-    top: 85%;
-    left: 52%;
-}
-
-.link{
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-    font-family: 'Times New Roman', Times, serif;
-    position: absolute;
-    transform: translate(-50%,-50%);    
-    text-align: center;
-    outline: none;
+.iconLink:hover{
+    background-color: white;
+    transition: 1s;
+    border-radius: 20px;
+    background-image: url(img/instaiconblack.png);
+    max-width: 50px;
 }
 
-
-
-@media (max-width: 500px) {
-
-    h1{
-    font-size: 23px;
-    text-align: center;
-    margin-left: -15%;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    }
-    .containerImgTitle{
-        color: white;
-        position: absolute;
-        top: 20%;
-        left: 56%;
-        transform: translate(-50%,-50%); 
-    }
-    .link{
-        text-align: center;
-    }
-
-    .profilepic{
-    width: 70%;
-    height: 80%;
-    border-radius: 40px;
-    border: solid white 2px;
-    }
-
-    p{
-        color: white;
-        font-size: 15px;
-        font-family: 'Times New Roman', Times, serif;
-        position: absolute;
-        top: 48%;
-        left: 50%;
-        transform: translate(-50%,-50%);    
-        text-align: center;
-        letter-spacing: 1px;
-    }
-    
+.iconLanguage{
+    height: 50px;
+    margin: 1px;
 }
 
+::-webkit-scrollbar{
+    opacity: 1;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #31394D;
+    border-radius: 15px;
+}
