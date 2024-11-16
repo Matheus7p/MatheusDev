@@ -1,7 +1,5 @@
 import { FaMoon } from "react-icons/fa6";
 import { Language } from "../Language/Language.component";
-import styles from "./navbar.module.css";
-
 import { useEffect, useState } from "react";
 
 export function Navbar() {
@@ -26,10 +24,10 @@ export function Navbar() {
     <nav
   className={`${
     scrolled ? "bg-black/10 backdrop-blur-md transition-all duration-300 ease-in-out" : ""
-  } p-4 h-20 fixed w-full flex justify-between items-center`}
+  } z-30 p-4 h-20 fixed w-full flex justify-between items-center`}
 >
   <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
-    <div>
+    <div className="md:ml-[-1.5rem]">
       <img className="h-10 w-10" src="./logo.png"/>
     </div>
 
