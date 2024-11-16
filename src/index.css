@@ -3,10 +3,8 @@
 @tailwind utilities;
 
 *{
-  color-scheme: light dark;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
 }
 
