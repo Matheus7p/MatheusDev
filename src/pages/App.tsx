@@ -1,11 +1,12 @@
 import { Navbar } from "../components/Navbar/navbar.component";
 import Particles from "../components/Particles/particles.components";
-import { StackList } from "../components/StackList/stackList.component";
+import { SocialMediaList } from "../components/SocialMedia/socialMediaList.component";
+import { StackList } from "../components/Stack/stackList.component";
 
 function App() {
   return (
     <>
-      <main className="h-[5000px]">
+      <main>
         <Navbar />
         <div className="h-[750px] bg-gradient-to-br from-[#806f8b] to-[#271479] flex items-center justify-start px-6 sm:px-12 md:px-24 lg:px-96">
           <div className="max-w-full z-20 sm:max-w-xl md:max-w-2xl lg:max-w-4xl">
@@ -33,6 +34,12 @@ function App() {
                 Ferramentas
               </h3>
               <StackList />
+            </div>
+            <div className="p-6 md:w-1/2 bg-black/10 backdrop-blur-sm rounded-2xl">
+              <h3 className="text-white font-semibold text-4xl no-select mb-4">
+                Siga-me
+              </h3>
+              <SocialMediaList />
             </div>
           </div>
         </section>

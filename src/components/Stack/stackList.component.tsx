@@ -3,7 +3,7 @@ import { AiOutlineAppstoreAdd } from "react-icons/ai";
 import { CiServer } from "react-icons/ci";
 import { FiDatabase } from "react-icons/fi";
 import { RiCodeSSlashLine } from "react-icons/ri";
-import { StackCard } from "../StackCard/stackCard.component";
+import { StackCard } from "./stackCard.component";
 
 export function StackList() {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
