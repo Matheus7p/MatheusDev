@@ -28,7 +28,7 @@ export function Navbar() {
 >
   <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
     <div className="md:ml-[-1.5rem]">
-      <img className="h-10 w-10" src="./logo.png"/>
+      <h1 className="text-4xl font-extrabold text-white text-stroke">MC</h1>
     </div>
 
     <div className="flex justify-between items-center gap-4">

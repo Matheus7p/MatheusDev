@@ -1,5 +1,6 @@
 import { Navbar } from "../components/Navbar/navbar.component";
 import Particles from "../components/Particles/particles.components";
+import { StackList } from "../components/StackList/stackList.component";
 
 function App() {
   return (
@@ -11,16 +12,30 @@ function App() {
             <h2 className="text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-bold text-white whitespace-nowrap no-select">
               Matheus Costa
             </h2>
-
-            <h4 className="text-2xl sm:text-4xl md:text-6xl text-white font-bold text-stroke no-select">Desenvolvedor Web</h4>
-            <br className="no-select"/>
-            <small className="font-medium text-[0.7rem] sm:text-base md:text-lg text-white no-select">
-              Desenvolvedor Front-End apaixonado por criar experiências web rápidas e responsivas. 
-              Sempre em busca de aprender, melhorar e expandir minhas habilidades, com interesse também em explorar o back-end e novos desafios.
+            <h4 className="text-4xl sm:text-4xl md:text-6xl text-white font-bold text-stroke no-select">
+              Desenvolvedor Web
+            </h4>
+            <br className="no-select" />
+            <small className="font-medium text-[1rem] sm:text-base md:text-lg text-white no-select">
+              Desenvolvedor Front-End apaixonado por criar experiências web
+              rápidas e responsivas. Sempre em busca de aprender, melhorar e
+              expandir minhas habilidades, com interesse também em explorar o
+              back-end e novos desafios.
             </small>
           </div>
           <Particles />
         </div>
+
+        <section className="bg-[#f1f5f9]">
+          <div className=" w-full  top-[-200px] relative flex flex-col md:flex-row px-4 lg:px-72 xl:px-96 gap-4">
+            <div className="h-full p-6 md:w-2/3 bg-black/10 backdrop-blur-sm rounded-2xl">
+              <h3 className="text-white font-semibold text-4xl no-select mb-4">
+                Ferramentas
+              </h3>
+              <StackList />
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
