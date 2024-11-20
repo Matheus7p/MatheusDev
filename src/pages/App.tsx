@@ -9,7 +9,7 @@ function App() {
       <main>
         <Navbar />
         <div className="h-[750px] bg-gradient-to-br from-[#806f8b] to-[#271479] flex items-center justify-start px-6 sm:px-12 md:px-24 lg:px-96">
-          <div className="max-w-full z-20 sm:max-w-xl md:max-w-2xl lg:max-w-4xl">
+          <div className="max-w-full z-20 mt-[-200px] sm:max-w-xl md:max-w-2xl lg:max-w-4xl">
             <h2 className="text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-bold text-white whitespace-nowrap no-select">
               Matheus Costa
             </h2>
@@ -28,14 +28,14 @@ function App() {
         </div>
 
         <section className="bg-[#f1f5f9]">
-          <div className=" w-full  top-[-200px] relative flex flex-col md:flex-row px-4 lg:px-72 xl:px-96 gap-4">
+          <div className=" w-full top-[-300px] relative flex flex-col md:flex-row px-4 lg:px-72 xl:px-96 gap-4">
             <div className="h-full p-6 md:w-2/3 bg-black/10 backdrop-blur-sm rounded-2xl">
               <h3 className="text-white font-semibold text-4xl no-select mb-4">
                 Ferramentas
               </h3>
               <StackList />
             </div>
-            <div className="p-6 md:w-1/2 bg-black/10 backdrop-blur-sm rounded-2xl">
+            <div className="h-full p-6 md:w-1/2 bg-black/10 backdrop-blur-sm rounded-2xl">
               <h3 className="text-white font-semibold text-4xl no-select mb-4">
                 Siga-me
               </h3>

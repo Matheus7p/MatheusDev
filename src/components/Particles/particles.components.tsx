@@ -65,18 +65,18 @@ const Particles: React.FC = () => {
     }
 
     const particles: Particle[] = [];
-    const particleCount = 100;
+    const particleCount = 150;
 
     for (let i = 0; i < particleCount; i++) {
-      const radius = Math.random() * 0.5 + 0.7;
+      const radius = Math.random() * 0.6 + 0.8;
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
       const velocity = {
-        x: (Math.random() - 0.5) * 1.5,
-        y: (Math.random() - 0.5) * 1.5,
+        x: (Math.random() - 0.5) * 0.9,
+        y: (Math.random() - 0.5) * 0.9,
       };
 
-      particles.push(new Particle(x, y, radius, "#DA70D6", velocity));
+      particles.push(new Particle(x, y, radius, "#ffffff", velocity));
     }
 
     const connectParticles = () => {
@@ -90,7 +90,7 @@ const Particles: React.FC = () => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(155, 48, 255, ${1 - distance / 100})`;
+            ctx.strokeStyle = `rgba(255, 255, 255, ${1 - distance / 100})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
             ctx.closePath();
