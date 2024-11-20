@@ -1,12 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 
 *{
-  color-scheme: light dark;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Geist", sans-serif;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 2px white; 
+  color: transparent; 
+}
+
+.no-select {
+  user-select: none; 
+}
+
+@layer utilities{
+  .underline-animation {
+    position: relative;
+    display: inline-block;
+  }
   
+  .underline-animation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px; 
+    width: 100%;
+    height: 1px; 
+    background: linear-gradient(to bottom right, #271479, #7f1df0); 
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease; 
+  }
+  .underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
 
