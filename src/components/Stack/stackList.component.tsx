@@ -14,51 +14,55 @@ export function StackList() {
 
   const stackData = [
     {
-      nameStack: "Front-end",
+      tech: "Front-end",
       icon: <RiCodeSSlashLine size={32} />,
       stacks: [
-        "https://skillicons.dev/icons?i=js",
-        "https://skillicons.dev/icons?i=html",
-        "https://skillicons.dev/icons?i=css",
-        "https://skillicons.dev/icons?i=react",
-        "https://skillicons.dev/icons?i=typescript",
-        "https://skillicons.dev/icons?i=tailwind",
+        { name: "JavaScript", link: "https://skillicons.dev/icons?i=js" },
+        { name: "HTML", link: "https://skillicons.dev/icons?i=html" },
+        { name: "CSS", link: "https://skillicons.dev/icons?i=css" },
+        { name: "React", link: "https://skillicons.dev/icons?i=react" },
+        { name: "TypeScript", link: "https://skillicons.dev/icons?i=typescript" },
+        { name: "Tailwind CSS", link: "https://skillicons.dev/icons?i=tailwind" },
+        { name: "Sass", link: "https://skillicons.dev/icons?i=sass" },
       ],
     },
     {
-      nameStack: "Back-end",
+      tech: "Back-end",
       icon: <CiServer size={32} />,
       stacks: [
-        "https://skillicons.dev/icons?i=nodejs",
-        "https://skillicons.dev/icons?i=java",
-        "https://skillicons.dev/icons?i=spring",
+        { name: "Node.js", link: "https://skillicons.dev/icons?i=nodejs" },
+        { name: "Java", link: "https://skillicons.dev/icons?i=java" },
+        { name: "Spring", link: "https://skillicons.dev/icons?i=spring" },
+        { name: "Prisma", link: "https://skillicons.dev/icons?i=prisma" },
       ],
     },
     {
-      nameStack: "Banco de Dados",
+      tech: "Banco de Dados",
       icon: <FiDatabase size={32} />,
       stacks: [
-        "https://skillicons.dev/icons?i=mysql",
-        "https://skillicons.dev/icons?i=mongodb",
+        { name: "MySQL", link: "https://skillicons.dev/icons?i=mysql" },
+        { name: "MongoDB", link: "https://skillicons.dev/icons?i=mongodb" },
       ],
     },
     {
-      nameStack: "Outros",
+      tech: "Outros",
       icon: <AiOutlineAppstoreAdd size={32} />,
       stacks: [
-        "https://skillicons.dev/icons?i=git",
-        "https://skillicons.dev/icons?i=docker",
-        "https://skillicons.dev/icons?i=figma",
+        { name: "Git", link: "https://skillicons.dev/icons?i=git" },
+        { name: "Docker", link: "https://skillicons.dev/icons?i=docker" },
+        { name: "Figma", link: "https://skillicons.dev/icons?i=figma" },
+        { name: "Jest", link: "https://skillicons.dev/icons?i=jest" },
+        { name: "Vercel", link: "https://skillicons.dev/icons?i=vercel" },
       ],
     },
   ];
-
+  
   return (
     <div className="grid grid-row gap-4">
       {stackData.map((stack, index) => (
         <StackCard
           key={index}
-          nameStack={stack.nameStack}
+          nameStack={stack.tech}
           icon={stack.icon}
           stacks={stack.stacks}
           isExpanded={expandedCard === index}

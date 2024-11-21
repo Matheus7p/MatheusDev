@@ -3,7 +3,7 @@ import { ReactElement, useRef, useEffect, useState } from "react";
 type StackCardProps = {
   nameStack: string;
   icon: ReactElement;
-  stacks: string[];
+  stacks: { name: string; link: string }[]; 
   isExpanded: boolean;
   toggleExpand: () => void;
 };
@@ -47,13 +47,20 @@ export function StackCard({
         }}
       >
         {isExpanded && (
-          <div className="flex gap-4 flex-wrap p-4">
+          <div className="flex gap-2 flex-wrap p-4">
             {stacks.map((stack, index) => (
               <div
                 key={index}
-                className="w-[50px] h-[50px] flex items-center justify-center"
+                className="relative w-[50px] h-[50px] flex items-center justify-center group"
               >
-                <img src={stack} />
+                <img
+                  src={stack.link}
+                  alt={stack.name}
+                  className="w-[40px] h-[40px]"
+                />
+                <span className="absolute top-[110%] left-1/2 transform -translate-x-1/2 bg-black text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  {stack.name}
+                </span>
               </div>
             ))}
           </div>

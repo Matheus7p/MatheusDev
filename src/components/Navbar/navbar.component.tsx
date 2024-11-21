@@ -24,11 +24,11 @@ export function Navbar() {
     <nav
   className={`${
     scrolled ? "bg-black/10 backdrop-blur-md transition-all duration-300 ease-in-out" : ""
-  } z-30 p-4 h-20 fixed w-full flex justify-between items-center`}
+  } z-30 p-4 h-16 fixed w-full flex justify-between items-center`}
 >
-  <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
-    <div className="md:ml-[-1.5rem]">
-      <h1 className="text-4xl font-extrabold text-white text-stroke no-select">MC</h1>
+  <div className="w-full flex justify-between items-center sm:px-[6%] md:px-[8%] lg:px-[10%]">
+    <div className="">
+      <h1 className="text-2xl font-extrabold text-white text-stroke no-select">MC</h1>  
     </div>
 
     <div className="flex justify-between items-center gap-4">

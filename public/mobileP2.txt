@@ -1,0 +1,20 @@
+1. val button = findViewById(R.id.button)
+button.setOnClickListener {
+	println("oi")
+}
+
+2. Kotlin é uma linguagem de programação muito utilizada no desenvolvimento android por ser simples, possuir suporte a bibliotecas java e também pelo seu desempenho.
+
+3. coroutines é uma forma de escrevermos codigo assincrono em kotlin, elas servem para que seja possivel executar funções ou outros blocos de codigo, sem travarmos o fluxo da aplicação.
+
+4. O android studio é uma IDE de desenvolvimento Android, e é muito utilizado por possuir suporte nativo ao kotlin e toda a configuração necessaria para desenvolvermos aplicações mobile.
+
+5. androidmanifest.xml é um arquivo que serve para definir configurações da aplicação como activities e services, e como ela deve funcionar no android.
+
+6. sharedPreferences é uma API no android que serve como um pequeno banco de dados, ele utiliza o formato chave-valor e esses dados são armazenados em um arquivo .xml
+
+8. AVD é uma configuração do android studio que permite emular dispositivos mobile direto na ide, para criar um novo emulador basta clicar em device manager e definir as configurações.
+
+9. gradle é um sistema de automação de builds no android studio, ele também gerencia dependencias e outras configurações do projeto.
+
+10. linearLayout é um tipo de visualização do aplicativo que organiza todos os componentes filhos em uma unica direção, horizontal ou vertical (android:orientation="vertical").
