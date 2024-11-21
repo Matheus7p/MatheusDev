@@ -28,7 +28,7 @@ export function StackCard({
     <div className="bg-white w-full flex flex-col rounded-xl shadow-md transition-all duration-500">
       <div className="flex items-center justify-between p-4">
         <div>
-          <h3 className="text-xl font-semibold mb-4 no-select">{nameStack}</h3>
+          <h3 className="text-lg font-semibold mb-4 no-select whitespace-nowrap">{nameStack}</h3>
           <button
             onClick={toggleExpand}
             className="text-[#271479] font-semibold underline-animation no-select"
