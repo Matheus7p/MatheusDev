@@ -64,20 +64,24 @@ const Particles: React.FC = () => {
       }
     }
 
-    const particles: Particle[] = [];
-    const particleCount = 150;
+    let particles: Particle[] = [];
 
-    for (let i = 0; i < particleCount; i++) {
-      const radius = Math.random() * 0.6 + 0.8;
-      const x = Math.random() * canvas.width;
-      const y = Math.random() * canvas.height;
-      const velocity = {
-        x: (Math.random() - 0.5) * 0.9,
-        y: (Math.random() - 0.5) * 0.9,
-      };
+    const createParticles = () => {
+      particles = [];
+      const particleCount = window.innerWidth < 768 ? 50 : 150;
 
-      particles.push(new Particle(x, y, radius, "#ffffff", velocity));
-    }
+      for (let i = 0; i < particleCount; i++) {
+        const radius = Math.random() * 0.6 + 0.8;
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        const velocity = {
+          x: (Math.random() - 0.5) * 0.9,
+          y: (Math.random() - 0.5) * 0.9,
+        };
+
+        particles.push(new Particle(x, y, radius, "#ffffff", velocity));
+      }
+    };
 
     const connectParticles = () => {
       for (let i = 0; i < particles.length; i++) {
@@ -107,10 +111,19 @@ const Particles: React.FC = () => {
       requestAnimationFrame(animate);
     };
 
+    createParticles();
     animate();
+
+    const handleResize = () => {
+      resizeCanvas();
+      createParticles();
+    };
+
+    window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", resizeCanvas);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 

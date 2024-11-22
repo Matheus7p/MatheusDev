@@ -3,7 +3,7 @@ import { ReactElement, useRef, useEffect, useState } from "react";
 type StackCardProps = {
   nameStack: string;
   icon: ReactElement;
-  stacks: { name: string; link: string }[]; 
+  stacks: { name: string; link: string }[];
   isExpanded: boolean;
   toggleExpand: () => void;
 };
@@ -41,7 +41,7 @@ export function StackCard({
 
       <div
         ref={contentRef}
-        className="overflow-hidden transition-[height] duration-500 ease-in-out"
+        className="overflow-hidden transition-height duration-500 ease-in-out"
         style={{
           height: `${contentHeight}px`,
         }}
@@ -51,7 +51,7 @@ export function StackCard({
             {stacks.map((stack, index) => (
               <div
                 key={index}
-                className="relative w-[50px] h-[50px] flex items-center justify-center group"
+                className="relative w-auto h-auto flex items-center justify-center group"
               >
                 <img
                   src={stack.link}
