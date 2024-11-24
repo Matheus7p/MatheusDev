@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
+import { ReactElement } from "react";
 
 type AnimatedTitleProps = {
-  title: string;
+  title: string | ReactElement;
 }
 
 const AnimatedTitle: React.FC<AnimatedTitleProps> = ({ title }) => {
