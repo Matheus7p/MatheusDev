@@ -14,7 +14,6 @@ export const stackData = [
       { name: "React", link: "https://skillicons.dev/icons?i=react" },
       { name: "TypeScript", link: "https://skillicons.dev/icons?i=typescript" },
       { name: "Tailwind CSS", link: "https://skillicons.dev/icons?i=tailwind" },
-      { name: "Sass", link: "https://skillicons.dev/icons?i=sass" },
     ],
   },
   {
@@ -22,9 +21,10 @@ export const stackData = [
     icon: <CiServer size={32} />,
     stacks: [
       { name: "Node.js", link: "https://skillicons.dev/icons?i=nodejs" },
+      { name: "Prisma", link: "https://skillicons.dev/icons?i=prisma" },
       { name: "Java", link: "https://skillicons.dev/icons?i=java" },
       { name: "Spring", link: "https://skillicons.dev/icons?i=spring" },
-      { name: "Prisma", link: "https://skillicons.dev/icons?i=prisma" },
+      
     ],
   },
   {
@@ -33,6 +33,7 @@ export const stackData = [
     stacks: [
       { name: "MySQL", link: "https://skillicons.dev/icons?i=mysql" },
       { name: "MongoDB", link: "https://skillicons.dev/icons?i=mongodb" },
+      { name: "PostgreSQL", link: "https://skillicons.dev/icons?i=postgresql" },
     ],
   },
   {
