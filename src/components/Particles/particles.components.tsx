@@ -21,25 +21,47 @@ const Particles: React.FC = () => {
 
     window.addEventListener("resize", resizeCanvas);
 
+    const lerpColor = (color1: string, color2: string, t: number): string => {
+      const c1 = parseInt(color1.slice(1), 16);
+      const c2 = parseInt(color2.slice(1), 16);
+
+      const r1 = (c1 >> 16) & 0xff;
+      const g1 = (c1 >> 8) & 0xff;
+      const b1 = c1 & 0xff;
+
+      const r2 = (c2 >> 16) & 0xff;
+      const g2 = (c2 >> 8) & 0xff;
+      const b2 = c2 & 0xff;
+
+      const r = Math.round(r1 + t * (r2 - r1));
+      const g = Math.round(g1 + t * (g2 - g1));
+      const b = Math.round(b1 + t * (b2 - b1));
+
+      return `rgb(${r}, ${g}, ${b})`;
+    };
+
     class Particle {
       x: number;
       y: number;
       radius: number;
       color: string;
       velocity: { x: number; y: number };
+      colorProgress: number;
+      colorDirection: number;
 
       constructor(
         x: number,
         y: number,
         radius: number,
-        color: string,
         velocity: { x: number; y: number }
       ) {
         this.x = x;
         this.y = y;
         this.radius = radius;
-        this.color = color;
         this.velocity = velocity;
+        this.colorProgress = Math.random(); // Random initial progress
+        this.colorDirection = Math.random() < 0.5 ? 1 : -1; // Random initial direction
+        this.color = "#ffffff";
       }
 
       draw() {
@@ -57,8 +79,24 @@ const Particles: React.FC = () => {
         this.x += this.velocity.x;
         this.y += this.velocity.y;
 
+        
         if (this.x < 0 || this.x > canvas.width) this.velocity.x *= -1;
         if (this.y < 0 || this.y > canvas.height) this.velocity.y *= -1;
+
+        
+        this.colorProgress += 0.01 * this.colorDirection;
+
+       
+        if (this.colorProgress > 1) {
+          this.colorProgress = 1;
+          this.colorDirection *= -1;
+        }
+        if (this.colorProgress < 0) {
+          this.colorProgress = 0;
+          this.colorDirection *= -1;
+        }
+
+        this.color = lerpColor("#ffffff", "#154061", this.colorProgress);
 
         this.draw();
       }
@@ -68,7 +106,7 @@ const Particles: React.FC = () => {
 
     const createParticles = () => {
       particles = [];
-      const particleCount = window.innerWidth < 768 ? 50 : 150;
+      const particleCount = window.innerWidth < 768 ? 50 : 100;
 
       for (let i = 0; i < particleCount; i++) {
         const radius = Math.random() * 0.6 + 0.8;
@@ -79,7 +117,7 @@ const Particles: React.FC = () => {
           y: (Math.random() - 0.5) * 0.9,
         };
 
-        particles.push(new Particle(x, y, radius, "#ffffff", velocity));
+        particles.push(new Particle(x, y, radius, velocity));
       }
     };
 
@@ -127,7 +165,12 @@ const Particles: React.FC = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="absolute top-0 left-0 w-full pointer-events-none" />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className="absolute top-0 left-0 w-full pointer-events-none"
+    />
+  );
 };
 
 export default Particles;
