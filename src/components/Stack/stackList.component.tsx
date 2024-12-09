@@ -1,5 +1,5 @@
 import { StackCard } from "./stackCard.component";
-import { stackData } from "../../domains/stack.data";
+import { stackData } from "../../Data/stack.data";
 
 export function StackList() {
 
