@@ -8,12 +8,11 @@ export const stackData = [
     tech: "Front-end",
     icon: <RiCodeSSlashLine size={32} />,
     stacks: [
-      { name: "JavaScript", link: "https://skillicons.dev/icons?i=js" },
-      { name: "HTML", link: "https://skillicons.dev/icons?i=html" },
-      { name: "CSS", link: "https://skillicons.dev/icons?i=css" },
       { name: "React", link: "https://skillicons.dev/icons?i=react" },
+      { name: "Next.Js", link: "https://skillicons.dev/icons?i=next" },
       { name: "TypeScript", link: "https://skillicons.dev/icons?i=typescript" },
       { name: "Tailwind CSS", link: "https://skillicons.dev/icons?i=tailwind" },
+      { name: "Bootstrap", link: "https://skillicons.dev/icons?i=bootstrap" },
     ],
   },
   {

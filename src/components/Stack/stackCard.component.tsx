@@ -15,7 +15,7 @@ export function StackCard({ nameStack, icon, stacks }: StackCardProps) {
     const timer = setTimeout(() => {
       setIsLoading(false); 
       setTimeout(() => setIsContentVisible(true), 50); 
-    }, 300); 
+    }, 500); 
 
     return () => clearTimeout(timer);
   }, []);

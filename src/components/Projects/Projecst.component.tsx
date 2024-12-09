@@ -1,4 +1,4 @@
-import { ProjectsData } from "../../domains/projects.data";
+import { ProjectsData } from "../../Data/projects.data";
 import { useState } from "react";
 
 export function Projects() {
@@ -25,7 +25,7 @@ export function Projects() {
             style={{ backgroundImage: `url(${project.img})` }}
           >
             <div
-              className="absolute bottom-8 left-1/2 backdrop-blur-sm transform -translate-x-1/2 bg-[#154061]/70 w-11/12 md:w-2/3 lg:w-1/2 h-[50vh] md:h-48 lg:h-64 bg-opacity-60 flex flex-col items-center justify-center p-4 rounded-lg"
+              className="absolute bottom-8 left-1/2 backdrop-blur-sm transform -translate-x-1/2 bg-gradient-to-b from-[#154061] to-[#010101]/10 w-11/12 md:w-2/3 lg:w-1/2 h-[50vh] md:h-48 lg:h-64 bg-opacity-60 flex flex-col items-center justify-center p-4 rounded-lg"
               style={{ boxShadow: "0 4px 8px 0 rgba(21, 64, 97, 0.5)" }}
             >
               <div className="text-white text-center space-y-4">
