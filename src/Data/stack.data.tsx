@@ -2,11 +2,12 @@ import { AiOutlineAppstoreAdd } from "react-icons/ai";
 import { CiServer } from "react-icons/ci";
 import { FiDatabase } from "react-icons/fi";
 import { RiCodeSSlashLine } from "react-icons/ri";
+import { IStackData } from "../@types/stackData";
 
-export const stackData = [
+export const stackData: IStackData[] = [
   {
     tech: "Front-end",
-    icon: <RiCodeSSlashLine size={32} />,
+    icon: RiCodeSSlashLine,
     stacks: [
       { name: "React", link: "https://skillicons.dev/icons?i=react" },
       { name: "Next.Js", link: "https://skillicons.dev/icons?i=next" },
@@ -17,7 +18,7 @@ export const stackData = [
   },
   {
     tech: "Back-end",
-    icon: <CiServer size={32} />,
+    icon: CiServer,
     stacks: [
       { name: "Node.js", link: "https://skillicons.dev/icons?i=nodejs" },
       { name: "Prisma", link: "https://skillicons.dev/icons?i=prisma" },
@@ -28,7 +29,7 @@ export const stackData = [
   },
   {
     tech: "Banco de Dados",
-    icon: <FiDatabase size={32} />,
+    icon: FiDatabase,
     stacks: [
       { name: "MySQL", link: "https://skillicons.dev/icons?i=mysql" },
       { name: "MongoDB", link: "https://skillicons.dev/icons?i=mongodb" },
@@ -37,7 +38,7 @@ export const stackData = [
   },
   {
     tech: "Outros",
-    icon: <AiOutlineAppstoreAdd size={32} />,
+    icon: AiOutlineAppstoreAdd,
     stacks: [
       { name: "Git", link: "https://skillicons.dev/icons?i=git" },
       { name: "Docker", link: "https://skillicons.dev/icons?i=docker" },

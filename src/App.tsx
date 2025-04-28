@@ -1,15 +1,16 @@
-import AnimatedTitle from "../components/AnimatedTitle/animatedTitle.component";
-import DownArrow from "../components/DownArrow/DownArrow.component";
-import Particles from "../components/Particles/particles.components";
-import { StackList } from "../components/Stack/stackList.component";
-import { socialMediaData } from "../Data/socialMedia.data";
-import { ProjectCards } from "../components/Projects/ProjectsCard.component";
+import AnimatedTitle from "./components/AnimatedTitle/animatedTitle.component";
+import DownArrow from "./components/DownArrow/DownArrow.component";
+import Particles from "./components/Particles/particles.components";
+import { ProjectList } from "./components/Projects/ProjectList.component";
+import { StackList } from "./components/Stack/stackList.component";
+import { ProjectsData } from "./Data/projects.data";
+import { socialMediaData } from "./Data/socialMedia.data";
 
 function App() {
   return (
     <>
       <main className="">
-        <section className="h-[80vh] xl:h-[70vh] bg-gradient-to-t from-[#010101] to-[#154061] flex items-center justify-center px-[5%] sm:px-[6%] md:px-[8%] lg:px-[10%]">
+        <section className="h-[80vh] xl:h-[70vh] bg-gradient-to-t from-[#010101d0] to-[#154061d5] flex items-center justify-center px-[5%] sm:px-[6%] md:px-[8%] lg:px-[10%]">
           <div className="max-w-full z-20 mt-[-30vh] md:mt-[-28vh] flex flex-col justify-center items-center">
             <h2 className="text-[2rem] lg:text-[5rem] font-bold text-white whitespace-nowrap no-select">
               <AnimatedTitle title="Matheus Costa" />
@@ -28,7 +29,7 @@ function App() {
                   rel="noopener noreferrer"
                   className="text-white flex flex-col items-center hover:opacity-80 hover:scale-110 hover:rotate-12 transform transition duration-300"
                 >
-                  <AnimatedTitle title={social.icon} />
+                  <social.icon className="w-[40px] h-[40px]"/>
                 </a>
               ))}
             </div>
@@ -51,7 +52,7 @@ function App() {
 
         <h3 className="text-2xl lg:text-4xl font-bold text-center text-[#154061]">Projetos</h3>
         <section className="p-4 justify-center items-center flex mb-10">
-          <ProjectCards />
+          <ProjectList projects={ProjectsData}/>
         </section>
 
 

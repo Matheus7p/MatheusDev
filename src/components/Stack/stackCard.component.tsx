@@ -1,12 +1,13 @@
-import { ReactElement, useState, useEffect } from "react";
+import { useState, useEffect, ElementType } from "react";
+import { IStack } from "../../@types/stack";
 
 type StackCardProps = {
   nameStack: string;
-  icon: ReactElement;
-  stacks: { name: string; link: string }[];
+  icon: ElementType;
+  stacks: IStack[];
 };
 
-export function StackCard({ nameStack, icon, stacks }: StackCardProps) {
+export function StackCard({ nameStack, icon: Icon, stacks }: StackCardProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [isContentVisible, setIsContentVisible] = useState(false);
 
@@ -71,7 +72,7 @@ export function StackCard({ nameStack, icon, stacks }: StackCardProps) {
                 transition: "opacity 0.7s ease-in-out",
               }}
             >
-              {icon}
+              <Icon className="h-[32px] w-[32px]"/>
             </div>
           )}
         </div>

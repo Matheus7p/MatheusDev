@@ -59,8 +59,8 @@ const Particles: React.FC = () => {
         this.y = y;
         this.radius = radius;
         this.velocity = velocity;
-        this.colorProgress = Math.random(); // Random initial progress
-        this.colorDirection = Math.random() < 0.5 ? 1 : -1; // Random initial direction
+        this.colorProgress = Math.random(); 
+        this.colorDirection = Math.random() < 0.5 ? 1 : -1; 
         this.color = "#ffffff";
       }
 
@@ -96,7 +96,7 @@ const Particles: React.FC = () => {
           this.colorDirection *= -1;
         }
 
-        this.color = lerpColor("#ffffff", "#154061", this.colorProgress);
+        this.color = lerpColor("#ffffff", "#154061d5", this.colorProgress);
 
         this.draw();
       }
@@ -106,7 +106,7 @@ const Particles: React.FC = () => {
 
     const createParticles = () => {
       particles = [];
-      const particleCount = window.innerWidth < 768 ? 50 : 100;
+      const particleCount = window.innerWidth < 768 ? 50 : 150;
 
       for (let i = 0; i < particleCount; i++) {
         const radius = Math.random() * 0.6 + 0.8;
