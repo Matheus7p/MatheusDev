@@ -29,7 +29,7 @@ function App() {
                   rel="noopener noreferrer"
                   className="text-white flex flex-col items-center hover:opacity-80 hover:scale-110 hover:rotate-12 transform transition duration-300"
                 >
-                  <social.icon className="w-[40px] h-[40px]"/>
+                  <social.icon className="w-[45px] h-[45px] 2xl:w-[60px] 2xl:h-[60px]"/>
                 </a>
               ))}
             </div>
@@ -39,7 +39,7 @@ function App() {
 
         <section className="flex flex-col items-center no-select">
           <div className="w-full relative flex justify-center items-center p-2 sm:p-0">
-            <div className="h-full p-4 mt-[-45vh] lg:mt-[-30vh] md:w-2/3 bg-black/10 backdrop-blur-sm rounded-2xl  mb-4">
+            <div className="h-full p-4 mt-[-45vh] lg:mt-[-25vh] xl:mt-[-25vh] md:w-2/3 bg-black/10 backdrop-blur-sm rounded-2xl  mb-4">
               <h3 className="text-white font-semibold text-[1.5rem] no-select mb-4">
                 Tecnologias
               </h3>
@@ -50,12 +50,11 @@ function App() {
 
         <DownArrow />
 
-        <h3 className="text-2xl lg:text-4xl font-bold text-center text-[#154061]">Projetos</h3>
-        <section className="p-4 justify-center items-center flex mb-10">
+        <h3 className="text-2xl lg:text-6xl font-bold text-center text-[#154061]">Projetos</h3>
+
+        <section className="p-4 justify-center items-center flex mb-48">
           <ProjectList projects={ProjectsData}/>
         </section>
-
-
       </main>
     </>
   );

@@ -1,4 +1,5 @@
 import { IProject } from "../../@types/project";
+import "../../index.css";
 
 interface IProjectCardProps {
   project: IProject,
@@ -6,15 +7,20 @@ interface IProjectCardProps {
 }
 
 export function ProjectCard ({ project, direction }: IProjectCardProps) {
+
+  const directionAnimation = direction === "left" ? "fade-right" : "fade-left" ;
+
   return (
     <div
-      className={`flex flex-col ${ direction === "left" ? "md:flex-row" : "md:flex-row-reverse"} 
-      justify-between w-auto h-auto md:w-[900px] md:h-[300px] items-center gap-6 bg-[#1540619a] p-6 rounded-lg shadow-2xl`} >
+      className={`flex flex-col ${ direction === "left" ? "lg:flex-row" : "lg:flex-row-reverse"}
+      justify-between w-auto h-auto lg:w-[900px] lg:h-[300px] items-center gap-6 bg-[#1540619a] p-6 rounded-lg shadow-2xl `} 
+      data-aos={directionAnimation} 
+      data-aos-duration="2000">
 
       <img
         src={project.img}
         alt={project.title}
-        className="h-56 w-[350px] object-cover rounded-lg border-[2x] border-[#154061] p-[2px]"
+        className=" md:h-56 md:w-[350px] object-cover rounded-lg border-[2x] border-[#154061] p-[2px] transition-transform hover:scale-125 lg:hover:scale-[200%] z-50 duration-500"
       />
       
       <div className="flex flex-col  text-white">
