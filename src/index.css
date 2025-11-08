@@ -7,6 +7,9 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto mono", monospace;
-  background-color: #171717;
   color: white;
+}
+
+body{
+  background-color: #171717;
 }

@@ -1,3 +1,4 @@
+import { About } from "./components/about.component";
 import Cursor from "./components/cursor.component";
 import Header from "./components/header.component";
 import { CursorProvider } from "./context/cursor.ctx";
@@ -9,6 +10,7 @@ function App() {
         <Cursor />
         <main className="mx-auto p-6 w-full">
           <Header />
+          <About />
         </main>
       </div>
     </CursorProvider>

@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className="flex justify-between items-center mb-16">
+    <div className="flex justify-between items-center mb-8">
       <div className="flex items-center gap-4">
         <a href="/" className="cursor-pointer">
           <img
