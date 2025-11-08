@@ -1,8 +1,14 @@
+import Cursor from "./components/cursor.component";
+import { CursorProvider } from "./context/cursor.ctx";
+
 function App() {
   return (
-    <main>
-     <button>teste</button>
-    </main>
+    <CursorProvider>
+      <Cursor />
+        <main className="">
+          <button>teste</button>
+        </main>
+    </CursorProvider>
   );
 }
 
