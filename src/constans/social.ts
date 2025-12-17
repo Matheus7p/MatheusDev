@@ -22,3 +22,5 @@ export const socialInfos: SocialLinks[] = [
     icon: RxLinkedinLogo,
   },
 ]
+
+export const RESUME_LINK = "https://drive.google.com/file/d/1ZLexoiOG7EltmJw0yuhBpgjHpiaXN4UZ/view?usp=sharing"
