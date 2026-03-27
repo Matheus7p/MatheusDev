@@ -1,7 +1,7 @@
 export interface ExperienceType {
   id: number;
   company: string;
-  companyUrl: string;
+  companyUrl: string[];
   designation: string;
   startDate: string;
   endDate: string;
