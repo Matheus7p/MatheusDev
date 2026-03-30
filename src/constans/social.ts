@@ -23,4 +23,4 @@ export const socialInfos: SocialLinks[] = [
   },
 ]
 
-export const RESUME_LINK = "https://drive.google.com/file/d/1ZLexoiOG7EltmJw0yuhBpgjHpiaXN4UZ/view?usp=sharing"
+export const RESUME_LINK = "https://drive.google.com/file/d/1FA2Kbo0M384_nBDf7xifTPu8FtwJA0qf/view?usp=sharing"
