@@ -11,14 +11,22 @@ const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
         </p>
 
         <div className="flex flex-col md:flex-row justify-between md:items-center md:gap-2 mb-2">
-          <a
-            href={experience.companyUrl}
+          <div className="flex flex-col md:flex-row justify-between md:items-center gap-2">
+            <a
+            href={experience.companyUrl[0]}
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#F5F5F5] font-medium hover:underline"
           >
             {experience.company}
           </a>
+           <p className="text-[#F5F5F5] font-medium">&</p>
+          <a 
+            href={experience.companyUrl[1]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#F5F5F5] font-medium hover:underline">Smart Link</a>
+          </div>
 
           <span className="text-sm text-[#F5F5F5] font-normal">
             {experience.designation}
